@@ -276,6 +276,8 @@ extension NWProtocolTLS.Options {
       )
     }
 
+    throw RuntimeError(code: .transportError, message: "[JCDEV] Intentional failure in transport.")
+
     sec_protocol_options_set_local_identity(
       self.securityProtocolOptions,
       sec_identity
